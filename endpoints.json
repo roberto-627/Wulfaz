@@ -1,0 +1,14 @@
+{
+    "endpoints": [
+        {
+            "url": "/",
+            "alias": "Home",
+            "response": "Home"
+        },
+        {
+            "url": "/test",
+            "alias": "Test",
+            "response": "Test"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+	"name": "wulfaz",
+	"version": "1.0.0",
+	"description": "NodeJs configurable web service that dispatches and receives information from a MQTT device network.",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/roberto-627/Wulfaz.git"
+	},
+	"author": "Roberto Melara",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/roberto-627/Wulfaz/issues"
+	},
+	"homepage": "https://github.com/roberto-627/Wulfaz#readme",
+	"dependencies": {
+		"express": "^4.17.1"
+	}
+}
