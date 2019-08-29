@@ -1,14 +1,1 @@
-{
-    "endpoints": [
-        {
-            "url": "/",
-            "alias": "Home",
-            "topic": ""
-        },
-        {
-            "url": "/test",
-            "alias": "Test",
-            "topic": ""
-        }
-    ]
-}
+{"endpoints":[{"url":"/test","alias":"Home","topic":""}]}

@@ -1,16 +1,18 @@
 const express = require('express');
-var mqtt = require('mqtt');
+const mqtt = require('mqtt');
+const fs = require('fs');
+
 const app = express();
 
-const data = require("./endpoints.json");
+var data = require("./endpoints.json");
 
-var client = mqtt.connect("mqtt://192.168.1.101", {clientId:"TESTOEE"});
+var client = mqtt.connect("mqtt://172.9.8.52", {clientId:"EES"});
 
 client.on("connect", function(){	
 	console.log("Connected to MQTT Broker.");
 });
 
-client.subscribe('Test', function (err) {
+client.subscribe('', function (err) {
     if (!err) {
 		console.log('Succesfully connected to topic.')
     }
@@ -31,8 +33,30 @@ for (let index = 0; index < data.endpoints.length; index++) {
   	});
 }
 
+app.get("/", (req, res) => {
+	res.status(500).send(data.endpoints);
+});
+
+app.put("/", (req, res) => {
+	fs.writeFile('./endpoints.json', JSON.stringify({
+		"endpoints": [
+			{
+				"url": "/test",
+				"alias": "Home",
+				"topic": ""
+			}
+		]
+	}), function(err) {
+		if(err) {
+			return console.log(err);
+		}
+
+		console.log("The file was saved!");
+	});
+});
+
 // Listen to the App Engine-specified port, or 8080 otherwise
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 9080;
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
