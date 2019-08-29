@@ -3,12 +3,12 @@
         {
             "url": "/",
             "alias": "Home",
-            "response": "Home"
+            "topic": ""
         },
         {
             "url": "/test",
             "alias": "Test",
-            "response": "Test"
+            "topic": ""
         }
     ]
 }
