@@ -6,7 +6,7 @@ const app = express();
 
 var data = require("./endpoints.json");
 
-var client = mqtt.connect("mqtt://172.9.8.52", {clientId:"EES"});
+var client = mqtt.connect("mqtt://", {clientId:"EES"});
 
 client.on("connect", function(){	
 	console.log("Connected to MQTT Broker.");
