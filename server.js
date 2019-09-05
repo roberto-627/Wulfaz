@@ -78,6 +78,90 @@ client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp S10/fmt/jso
     }
 });
 
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H1/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Temp H1');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H2/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Temp H2');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H3/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Temp H3');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H4/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Temp H4');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 1/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 1');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 2/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 2');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 3/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 3');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 4/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 4');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 5/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 5');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 6/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 6');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 7/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 7');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 8/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 8');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 9/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 9');
+    }
+});
+
+client.subscribe('iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 10/fmt/json', function (err) {
+    if (!err) {
+		console.log('Succesfully connected to topic: Conf Sec 10');
+    }
+});
+
 var TS1;
 var TS2;
 var TS3;
@@ -88,6 +172,20 @@ var TS7;
 var TS8;
 var TS9;
 var TS10;
+var TH1;
+var TH2;
+var TH3;
+var TH4;
+var CS1;
+var CS2;
+var CS3;
+var CS4;
+var CS5;
+var CS6;
+var CS7;
+var CS8;
+var CS9;
+var CS10;
 
 var mqtt_data;
 
@@ -132,11 +230,51 @@ client.on('message', function (topic, message) {
 		case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp S10/fmt/json':
 			TS10 = mqtt_data;
 			break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H1/fmt/json':
+            TH1 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H2/fmt/json':
+            TH2 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H3/fmt/json':
+            TH3 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Temp H4/fmt/json':
+            TH4 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 1/fmt/json':
+            CS1 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 2/fmt/json':
+            CS2 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 3/fmt/json':
+            CS3 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 4/fmt/json':
+            CS4 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 5/fmt/json':
+            CS5 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 6/fmt/json':
+            CS6 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 7/fmt/json':
+            CS7 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 8/fmt/json':
+            CS8 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 9/fmt/json':
+            CS9 = mqtt_data;
+            break;
+        case 'iot-2/type/cMT-G01 Gateway/id/CMT_INLOHER/evt/Conf Sec 10/fmt/json':
+            CS10 = mqtt_data;
+            break;
 		default:
 			break;
 	}
-	//console.log(mqtt_data);
-	//client.end()
 });
 
 /*
@@ -147,8 +285,6 @@ for (let index = 0; index < data.endpoints.length; index++) {
   	});
 }
 */
-
-//{ "d" : { "Temp S1" : [ 23 ] }, "ts" : "2019-09-03T02:16:22.885935" }
 
 app.get("/Temperatura/Secadora1", (req, res) => {
 	TS1 = JSON.parse(TS1);
@@ -227,6 +363,118 @@ app.get("/Temperatura/Secadora10", (req, res) => {
 	response_structure.data.Etapa = "Secadora10";
 	response_structure.data.Tag = TS10.d['Temp S10'][0];
 	response_structure.ts = TS10.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Temperatura/Horno1", (req, res) => {
+	TH1 = JSON.parse(TH1);
+	response_structure.data.Etapa = "Horno1";
+	response_structure.data.Tag = TH1.d['Temp H1'][0];
+	response_structure.ts = TH1.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Temperatura/Horno2", (req, res) => {
+	TH2 = JSON.parse(TH2);
+	response_structure.data.Etapa = "Horno2";
+	response_structure.data.Tag = TH2.d['Temp H2'][0];
+	response_structure.ts = TH2.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Temperatura/Horno3", (req, res) => {
+	TH3 = JSON.parse(TH3);
+	response_structure.data.Etapa = "Horno3";
+	response_structure.data.Tag = TH3.d['Temp H3'][0];
+	response_structure.ts = TH3.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Temperatura/Horno4", (req, res) => {
+	TH4 = JSON.parse(TH4);
+	response_structure.data.Etapa = "Horno4";
+	response_structure.data.Tag = TH4.d['Temp H4'][0];
+	response_structure.ts = TH4.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora1", (req, res) => {
+	CS1 = JSON.parse(CS1);
+	response_structure.data.Etapa = "Secadora1";
+	response_structure.data.Tag = CS1.d['Conf Sec 1'][0];
+	response_structure.ts = CS1.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora2", (req, res) => {
+	CS2 = JSON.parse(CS2);
+	response_structure.data.Etapa = "Secadora2";
+	response_structure.data.Tag = CS2.d['Conf Sec 2'][0];
+	response_structure.ts = CS2.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora3", (req, res) => {
+	CS3 = JSON.parse(CS3);
+	response_structure.data.Etapa = "Secadora3";
+	response_structure.data.Tag = CS3.d['Conf Sec 3'][0];
+	response_structure.ts = CS3.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora4", (req, res) => {
+	CS4 = JSON.parse(CS4);
+	response_structure.data.Etapa = "Secadora4";
+	response_structure.data.Tag = CS4.d['Conf Sec 4'][0];
+	response_structure.ts = CS4.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora5", (req, res) => {
+	CS5 = JSON.parse(CS5);
+	response_structure.data.Etapa = "Secadora5";
+	response_structure.data.Tag = CS5.d['Conf Sec 5'][0];
+	response_structure.ts = CS5.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora6", (req, res) => {
+	CS6 = JSON.parse(CS6);
+	response_structure.data.Etapa = "Secadora6";
+	response_structure.data.Tag = CS6.d['Conf Sec 6'][0];
+	response_structure.ts = CS6.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora7", (req, res) => {
+	CS7 = JSON.parse(CS7);
+	response_structure.data.Etapa = "Secadora7";
+	response_structure.data.Tag = CS7.d['Conf Sec 7'][0];
+	response_structure.ts = CS7.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora8", (req, res) => {
+	CS8 = JSON.parse(CS8);
+	response_structure.data.Etapa = "Secadora8";
+	response_structure.data.Tag = CS8.d['Conf Sec8'][0];
+	response_structure.ts = CS8.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora9", (req, res) => {
+	CS9 = JSON.parse(CS9);
+	response_structure.data.Etapa = "Secadora9";
+	response_structure.data.Tag = CS9.d['Conf Sec 9'][0];
+	response_structure.ts = CS9.ts;
+	res.status(200).send(response_structure);
+});
+
+app.get("/Confirmacion/Secadora10", (req, res) => {
+	CS10 = JSON.parse(CS10);
+	response_structure.data.Etapa = "Secadora10";
+	response_structure.data.Tag = CS10.d['Conf Sec 10'][0];
+	response_structure.ts = CS10.ts;
 	res.status(200).send(response_structure);
 });
 
